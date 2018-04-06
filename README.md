@@ -1,94 +1,112 @@
-# Starter
+# StarterTest59
 
-A starter PHP project with many services and features pre-configured. Simply use `composer create-project`, and a new GitHub repository will be created and configured to be tested on Travis CI.
+Put a one-line description of your project here.
 
-## Usage
+[![Travis CI](https://travis-ci.org/greg-1-anderson/starter-test-59.svg?branch=master)](https://travis-ci.org/greg-1-anderson/starter-test-59)
+[![Windows CI](https://ci.appveyor.com/api/projects/status/maugt03pcsbbr90a?svg=true)](https://ci.appveyor.com/project/greg-1-anderson/starter-test-59)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/greg-1-anderson/starter-test-59/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/greg-1-anderson/starter-test-59/?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/greg-1-anderson/starter-test-59/badge.svg?branch=master)](https://coveralls.io/github/greg-1-anderson/starter-test-59?branch=master) 
+[![License](https://img.shields.io/badge/license-MIT-408677.svg)](LICENSE)
 
-To get started, export your [GitHub personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) and then create a new project.
-```
-$ export GITHUB_TOKEN='...'
-$ export APPVEYOR_TOKEN='...'      # Optional
-$ export SCRUTINIZER_TOKEN='...'   # Optional
-$ composer create-project g-1-a/starter my-new-project
-```
-The new project will be owned by the currently-authenticated user. If you would like to create a new project in an organization instead, then set the `GITHUB_ORG` environment variable.
-```
-$ export GITHUB_ORG='my-github-username-or-org'
-```
+<!-- 
+There are two choices for LICENSE badges:
 
-Once the new project is created, automated scripts will customize it and set up a number of serivces. See the section [Description of Features](#description-of-features) below for more information. Once the scripts have finished running, you may customize your README file and start coding!
+1. License using shields.io (above): Can contain any text you want, and has no prerequisites, but must be manually updated if you change the license.
+2. License using poser.pugx.org (below): shows the license that Packagist.org read from your composer.json file. Must register with Packagist to use Poser.
 
-### Access Token Generation
+[![License](https://poser.pugx.org/greg-1-anderson/starter-test-59/license)](https://github.com/greg-1-anderson/starter-test-59//master/LICENSE)
+-->
 
-Generating and exporting a personal access token for the services below is recommended, as doing this will allow the post-create-project scripts to configure and enable these services automatically.
+## FINISH CUSTOMIZATION
 
-| Export                         | Token Generation URL       
-| ------------------------------ | -------------------------- 
-| exoirt GITHUB_TOKEN='...'      | [Generate GitHub token](https://github.com/settings/tokens)
-| export APPVEYOR_TOKEN='...'    | [Generate Appveyor token](https://ci.appveyor.com/api-token)   
-| export SCRUTINIZER_TOKEN='...' | [Generate Scrutinizer token](https://scrutinizer-ci.com/profile/applications)
+Enable those services shown below that have not already been configured:
 
-### Manual Service Configuration
-
-If the personal access token for these services is not set up, then the service may be manually configured later. In addition, this project is also configured for use with Packagist, Dependencies.io and Coveralls; these services only need to be manually authorized through their web interface to enable them for projects created with this template.
-
-Follow the links in the table below to configure the services you would like to use.
-
-| Feature                   | Manual Setup URL
+| Feature                   | Setup
 | ------------------------- | ----------------
-| Collaborative repository  | [Create GitHub repository](https://github.com/new)
-| Linux permutation testing | [Enable Travis CI](https://travis-ci.org/profile)
-| Windows testing           | [Enable Appveyor CI](https://ci.appveyor.com/projects/new)
-| Static analysis           | [Enable Scrutinizer CI](https://scrutinizer-ci.com/g/new)
+| Collaborative repository  | [DONE](https://github.com/greg-1-anderson/starter-test-59)
+| Linux permutation testing | [DONE](https://travis-ci.org/greg-1-anderson/starter-test-59)
+| Windows testing           | [DONE](https://ci.appveyor.com/project/greg-1-anderson/starter-test-59)
+| Static analysis           | [DONE](https://scrutinizer-ci.com/g/greg-1-anderson/starter-test-59/)
 | Code coverage             | [Enable Coveralls](https://coveralls.io/repos/new)
 | Package manager           | [Register with Packagist](https://packagist.org/packages/submit)
 | Dependency updates        | [Enable Dependencies.io](https://app.dependencies.io/add-project)
 
-## Description of Features
+Then, delete this section and finish customizing this README.
 
-This project comes with a number of configuration files already set up for a number of services. A Composer post-install hook makes further modifications, and, where possible, makes API calls to complete the setup for some services.
+## Getting Started
 
-The following things are provided:
+Explain how to get a copy of this project up and running on a new user's local machine.
 
-- Project information
-  - [composer.json](/composer.json): Automatically customized with project-specific information.
-    - Project name (taken from `create-project` project name argument)
-    - Author name and email address (from git configuration)
-  - [README.md](/customize/templates/README.md): Example template with badges to get you started.
-  - [CHANGELOG.md](/CHANGELOG.md): Blank slate provided in the hopes that releases may be recorded here.
-  - [LICENSE](/LICENSE): Defaults to MIT. Will automatically be updated with dependency licenses and copyright year every time 'composer update' is run.
-- Project metadata
-  - [.editorconfig](/.editorconfig): Set up for PSR-2 conventions for compliant editors.
-  - [.gitattributes](/.gitattributes): Ensures that tests, build results and so on are not exported to Packagist.
-  - [.gitignore](/.gitignore): Ensures that vendor directory and so on is not committed to the repository.
-- Repository
-  - **GitHub:** Automatically creates a new repository on GitHub and pushes up your new project. Starter GitHub contribution templates are provided:
-    - [CONTRIBUTING.md](/CONTRIBUTING.md)
-    - [issue_template.md](/.github/issue_template.md)
-    - [pull_request_template](/.github/pull_request_template.md)    
-- Testing
-  - **Travis:** Automatically enables testing for the new project in Travis.
-    - [phpunit.xml.dist](/phpunit.xml.dist): Test configuration with code coverage (html coverage report configuration is present, but commented out).
-    - [Example.php](/src/Example.php): A simple class that multiplies. Replace with your own code.
-    - [ExampleTest.php](/tests/ExampleTest.php): A simple data-driven test that pulls fixture data from a data provider. Replace with your own tests.
-  - **Coveralls:** Project must be manually configured on [coveralls.io](https://coveralls.io). PHPUnit and Travis are already configured to export coverage data to Coveralls automatically; all that needs to be done is to enable the Coveralls service for the new project.
-  - **Appveyor:** An appveyor configuration file is provided. If an APPVEYOR_TOKEN environment variable is defined when the project is created, Appveyor testing will be automatically configured. Otherwise, it will need to be manually enabled on [appveyor](https://www.appveyor.com/) if Windows testing is desired.
-  - **Scrutinizer:** If a SCRUTINIZER_TOKEN environment variable is defined when the project is created, then Scrutinizer static code analysis is automatically enabled. Otherwise, the project must be manually enabled on [scrutinizer-ci.com](https://scrutinizer-ci.com).
-  - Provides handy composer scripts:
-    - `composer test`: Run all tests.
-    - `composer unit`: Run just the phpunit tests.
-    - `composer lint`: Run the php linter.
-    - `composer cs`: Run the code sniffer to check for PSR-2 compliance.
-    - `composer cbf`: Fix code style violations where possible.
-- Composer
-  - **Packagist:** Project must be manually submitted to [packagist.org](https://packagist.org) in order to be able to `require` it as a dependency of some other project.
-  - **Dependencies:** A [dependencies.yml](/dependencies.yml) configuration file is provided; if the project is enabled on [dependencies.io](https://www.dependencies.io/), then pull requests will automatically be created any time newer versions of the project's dependencies become available.
-  - [Composer test scenarios](https://github.com/g-1-a/composer-test-scenarios) are configured to allow tests to be written for PHPUnit 6, and still use PHPUnit 5 for testing on PHP 5.6. Highest/lowest testing is also configured by default. This project also contains the scripts used to keep the LICENSES file up-to-date.
+See deployment for notes on how to deploy the project on a live system.
+
+### Prerequisites
+
+List the things that are needed to install the software and how to install them. For most PHP projects, it should usually be sufficient to run:
+
+```
+composer install
+```
+
+### Installing
+
+Provide a step by step series of examples that show how to install this project.
+
+Say what the step will be:
+
+```
+Give the example
+```
+
+And repeat:
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo.
+
+## Running the tests
+
+The test suite may be run locally by way of some simple composer scripts:
+
+| Test             | Command
+| ---------------- | ---
+| Run all tests    | `composer test`
+| PHPUnit tests    | `composer unit`
+| PHP linter       | `composer lint`
+| Code style       | `composer cs`     
+| Fix style errors | `composer cbf`
+
+
+## Deployment
+
+Add additional notes about how to deploy this on a live system.
+
+## Built With
+
+* [Composer](https://getcomposer.org/) - Dependency Management
 
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on the process for submitting pull requests to us.
 
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/greg-1-anderson/starter-test-59/tags). 
+
+## Authors
+
+* **Greg Anderson** - created project from template.
+
+See also the list of [contributors](https://github.com/greg-1-anderson/starter-test-59/contributors) who participated in this project.
+
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone who's code was used
+* Inspiration
+* etc
+* Thanks to PurpleBooth for the [example README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)

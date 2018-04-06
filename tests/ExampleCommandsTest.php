@@ -1,6 +1,6 @@
 <?php
 
-namespace ExampleProject;
+namespace StarterTest59;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Console\Output\BufferedOutput;
@@ -31,7 +31,7 @@ EOT;
     public function setUp()
     {
         // Store the command classes we are going to test
-        $this->commandClasses = [ \ExampleProject\Cli\ExampleCommands::class ];
+        $this->commandClasses = [ \StarterTest59\Cli\ExampleCommands::class ];
 
         // Define our invariants for our test
         $this->appName = 'TestFixtureApp';
